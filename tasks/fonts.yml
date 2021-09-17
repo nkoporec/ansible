@@ -1,0 +1,26 @@
+- name: Ensure .fonts directory exits
+  become_user: nkoporec
+  file:
+    dest: "{{ dest_fonts | dirname }}"
+    mode: 0700
+    state: directory
+  tags:
+    - install
+    - fonts
+
+- name: Install fonts
+  become_user: root
+  copy:
+    src: "{{ source_fonts }}"
+    dest: "{{ dest_fonts }}"
+    directory_mode: yes
+  tags:
+    - install
+    - fonts
+
+- name: Fix folder permissions
+  become_user: root
+  shell: chown -R nkoporec:nkoporec {{ dest_fonts | dirname }}
+  tags:
+    - install
+    - fonts

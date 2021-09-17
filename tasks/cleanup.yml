@@ -4,10 +4,3 @@
   tags:
     - install
     - cleanup
-
-- name: Delete tmp folder
-  become_user: nkoporec
-  shell: rm -R /tmp
-  tags:
-    - install
-    - reset
