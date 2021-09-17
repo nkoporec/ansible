@@ -14,20 +14,14 @@
 
 - name: Clone social-ddev project
   become_user: nkoporec
-  ansible.builtin.git:
-    repo: 'git@github.com:nkoporec/social-ddev.git'
-    bare: true
-    dest: "{{ lookup('env', 'HOME') }}/work/open-social"
+  shell: cd {{ lookup('env', 'HOME') }}/work && git clone git@github.com:nkoporec/social-ddev.git open-social
   tags:
     - install
     - projects
 
 - name: Clone dump project
   become_user: nkoporec
-  ansible.builtin.git:
-    repo: 'git@github.com:nkoporec/dump.git'
-    bare: true
-    dest: "{{ lookup('env', 'HOME') }}/personal/dump"
+  shell: cd {{ lookup('env', 'HOME') }}/personal && git clone git@github.com:nkoporec/dump.git dump
   tags:
     - install
     - projects
