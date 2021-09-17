@@ -14,3 +14,4 @@
 
 ## TODO:
  1. Set up AUR packages
+ 2. Set up fonts
