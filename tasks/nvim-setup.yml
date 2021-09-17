@@ -1,4 +1,5 @@
 - name: Neovim Installation
+  become_user: root
   ansible.builtin.git:
     repo: 'https://github.com/neovim/neovim.git'
     dest: "/tmp/neovim"
@@ -8,6 +9,7 @@
 
 - name: Build neovim
   shell: "cd /tmp/neovim && make"
+  become_user: root
   tags:
     - install
     - neovim
