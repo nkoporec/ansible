@@ -21,7 +21,7 @@ shell:
 	docker exec -it new-arch env TERM=xterm bash
 
 ansible-install:
-	ansible-galaxy install -r requirements.yml && ansible-playbook local.yml --ask-vault-pass
+	ansible-galaxy install -r requirements.yml && ansible-playbook local.yml --ask-vault-pass --ask-become-pass
 
 test: test-image
 

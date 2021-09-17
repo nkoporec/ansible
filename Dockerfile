@@ -4,5 +4,4 @@ WORKDIR /usr/local/bin
 RUN pacman -Syy
 RUN pacman -Sy --noconfirm --needed git ansible curl base-devel openssh
 RUN useradd -ms /bin/bash nkoporec
-RUN echo '%nkoporec ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 COPY . .
