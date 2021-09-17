@@ -1,6 +1,6 @@
 - name: Install packages (using pacman)
   pacman:
-    name: tmux, fzf, bat, gimp, xclip, copyq, flameshot, firefox-developer-edition, nautilus
+    name: tmux, fzf, bat, gimp, xclip, copyq, flameshot, firefox-developer-edition, nautilus, alacritty
   tags:
     - install
     - productivity
