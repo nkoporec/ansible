@@ -1,0 +1,12 @@
+- name: Install yadm
+  pacman:
+    name: yadm
+  tags:
+    - install
+    - core
+- name: Install .dotfiles
+  become_user: nkoporec
+  shell: cd {{ lookup('env', 'HOME') }} && yadm clone git@github.com:nkoporec/dotfiles.git
+  tags:
+    - install
+    - dotfiles

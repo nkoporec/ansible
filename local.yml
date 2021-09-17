@@ -1,12 +1,25 @@
 - hosts: localhost
   become: true
   vars:
-    source_key: "./.ssh/id_rsa"
-    dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
+    source_key_private: "./ssh/id_rsa"
+    dest_key_private: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
+    source_key_pub: "./ssh/id_rsa.pub"
+    dest_key_pub: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa.pub"
   pre_tasks:
     - name: update repositories
       pacman:
         update_cache: yes
       changed_when: False
   tasks:
+    - include: tasks/ssh-setup.yml
+    - include: tasks/zsh-setup.yml
     - include: tasks/core-setup.yml
+    - include: tasks/dotfiles.yml
+    - include: tasks/yay-setup.yml
+    - include: tasks/node-setup.yml
+    - include: tasks/npm-packages.yml
+    - include: tasks/composer-setup.yml
+    - include: tasks/nvim-setup.yml
+    - include: tasks/productivity-tools.yml
+    - include: tasks/projects.yml
+    - include: tasks/cleanup.yml

@@ -1,0 +1,47 @@
+- name: Neovim Installation
+  ansible.builtin.git:
+    repo: 'https://github.com/neovim/neovim.git'
+    dest: "/tmp/neovim"
+  tags:
+    - install
+    - neovim
+
+- name: Build neovim
+  shell: "cd /tmp/neovim && make"
+  tags:
+    - install
+    - neovim
+
+- name: Install neovim
+  shell: "cd /tmp/neovim && make install"
+  become_user: root
+  tags:
+    - install
+    - neovim
+- name: Neovim Plugin Development 1
+  pacman:
+    name: luarocks
+  tags:
+    - install
+    - neovim
+
+- name: Neovim Plugin Development 2 luacheck
+  shell: luarocks install luacheck
+  tags:
+    - install
+    - neovim
+- name: Install Vim-Plug
+  become_user: nkoporec
+  shell: curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  tags:
+    - install
+    - dotfiles
+    - neovim
+
+- name: Install vim Plugins
+  become_user: nkoporec
+  shell: nvim --headless +PlugInstall +qall +silent
+  tags:
+    - install
+    - dotfiles
+    - neovim

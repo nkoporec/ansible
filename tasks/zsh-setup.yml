@@ -1,0 +1,47 @@
+- name: Install ZSH
+  pacman:
+    name: zsh
+  tags:
+    - install
+    - dotfiles
+    - zsh
+- name: Change shell to zsh
+  become_user: root
+  shell: chsh -s $(which zsh) nkoporec
+  tags:
+    - install
+    - dotfiles
+    - zsh
+- name: Oh-My-Zsh
+  become_user: nkoporec
+  shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+  tags:
+    - install
+    - dotfiles
+    - zsh
+- name: Install zsh-autosuggestions
+  become_user: nkoporec
+  ansible.builtin.git:
+    repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
+    dest: "~/.oh-my-zsh/plugins/zsh-autosuggestions"
+  tags:
+    - install
+    - zsh
+
+- name: Install zsh-syntax-highlighting
+  become_user: nkoporec
+  ansible.builtin.git:
+    repo: 'https://github.com/zsh-users/zsh-syntax-highlighting.git'
+    dest: "~/.oh-my-zsh/plugins/zsh-syntax-highlighting"
+  tags:
+    - install
+    - zsh
+
+- name: Install zsh-z
+  become_user: nkoporec
+  ansible.builtin.git:
+    repo: 'https://github.com/agkozak/zsh-z.git'
+    dest: "~/.oh-my-zsh/plugins/zsh-z"
+  tags:
+    - install
+    - zsh

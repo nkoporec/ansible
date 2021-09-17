@@ -1,0 +1,48 @@
+- name: Ensure .ssh directory exists.
+  become_user: root
+  file:
+    dest: "{{ dest_key_private | dirname }}"
+    mode: 0700
+    state: directory
+  tags:
+    - dotfiles
+    - install
+    - ssh
+
+- name: Fix folder permissions
+  become_user: root
+  shell: chown -R nkoporec:nkoporec {{ source_key_private | dirname }}
+  tags:
+    - dotfiles
+    - install
+    - ssh
+
+- name: Install private ssh key
+  become_user: root
+  copy:
+    src: "{{ source_key_private }}"
+    dest: "{{ dest_key_private }}"
+    mode: 0600
+  tags:
+    - dotfiles
+    - install
+    - ssh
+
+- name: Install pub ssh key
+  become_user: root
+  copy:
+    src: "{{ source_key_pub }}"
+    dest: "{{ dest_key_pub }}"
+    mode: 0600
+  tags:
+    - dotfiles
+    - install
+    - ssh
+
+- name: Fix folder permissions
+  become_user: root
+  shell: chown -R nkoporec:nkoporec {{ dest_key_private | dirname }}
+  tags:
+    - dotfiles
+    - install
+    - ssh

@@ -1,0 +1,40 @@
+- name: Install Yarn
+  become_user: nkoporec
+  npm:
+    name: yarn
+    global: yes
+  tags:
+    - install
+    - node
+- name: Install Typescript server
+  become_user: nkoporec
+  npm:
+    name: typescript-language-server
+    global: yes
+  tags:
+    - install
+    - node
+- name: Install Typescript
+  become_user: nkoporec
+  npm:
+    name: typescript
+    global: yes
+  tags:
+    - install
+    - node
+- name: Install TS-Node
+  become_user: nkoporec
+  npm:
+    name: ts-node
+    global: yes
+  tags:
+    - install
+    - node
+- name: Install Intelephense
+  become_user: nkoporec
+  npm:
+    name: intelephense
+    global: yes
+  tags:
+    - install
+    - node

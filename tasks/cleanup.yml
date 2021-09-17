@@ -1,0 +1,13 @@
+- name: Reset dotfiles
+  become_user: nkoporec
+  shell: cd /home/nkoporec && yadm reset --hard
+  tags:
+    - install
+    - cleanup
+
+- name: Delete tmp folder
+  become_user: nkoporec
+  shell: rm -R /tmp
+  tags:
+    - install
+    - reset

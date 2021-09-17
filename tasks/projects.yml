@@ -1,0 +1,33 @@
+- name: Create project folders
+  become_user: nkoporec
+  shell: mkdir /home/nkoporec/personal && mkdir /home/nkoporec/work
+  tags:
+    - install
+    - projects
+
+- name: Create platform.sh project folder
+  become_user: nkoporec
+  shell: mkdir /home/nkoporec/work/platformsh
+  tags:
+    - install
+    - projects
+
+- name: Clone social-ddev project
+  become_user: nkoporec
+  ansible.builtin.git:
+    repo: 'git@github.com:nkoporec/social-ddev.git'
+    bare: true
+    dest: "{{ lookup('env', 'HOME') }}/work/open-social"
+  tags:
+    - install
+    - projects
+
+- name: Clone dump project
+  become_user: nkoporec
+  ansible.builtin.git:
+    repo: 'git@github.com:nkoporec/dump.git'
+    bare: true
+    dest: "{{ lookup('env', 'HOME') }}/personal/dump"
+  tags:
+    - install
+    - projects

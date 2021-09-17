@@ -1,0 +1,13 @@
+- name: Set up tmp folder and clone repository
+  shell: cd /tmp && git clone https://aur.archlinux.org/yay-git.git
+  become_user: nkoporec
+  tags:
+    - install
+    - yay
+
+- name: Build Yay
+  become_user: nkoporec
+  shell: cd /tmp/yay-git && makepkg -si --noconfirm
+  tags:
+    - install
+    - yay

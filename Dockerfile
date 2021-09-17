@@ -1,7 +1,8 @@
-FROM archlinux:latest
+FROM carlodepieri/docker-archlinux-systemd
 ARG TAGS
 WORKDIR /usr/local/bin
 RUN pacman -Syy
-RUN pacman -S --noconfirm --needed git ansible curl base-devel
+RUN pacman -Sy --noconfirm --needed git ansible curl base-devel openssh
+RUN useradd -ms /bin/bash nkoporec
+RUN echo '%nkoporec ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 COPY . .
-CMD ["sh", "-c", "ansible-playbook $TAGS local.yml"]

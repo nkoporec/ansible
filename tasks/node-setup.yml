@@ -1,0 +1,25 @@
+- name: Install nodejs and npm
+  pacman:
+    name: nodejs, npm
+  tags:
+    - install
+    - node
+- name: Install N
+  npm:
+    name: n
+    global: yes
+  tags:
+    - install
+    - node
+- name: Install correct version of Node
+  shell: n 10.16
+  tags:
+    - install
+    - node
+- name: Fix permission issues for npm
+  shell: chown -R nkoporec ~/.npm && chown -R nkoporec /usr/local/lib/node_modules && chown -R nkoporec /usr/local/bin
+  become_user: root
+  tags:
+    - install
+    - node
+

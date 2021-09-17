@@ -1,0 +1,26 @@
+- name: Install composer
+  pacman:
+    name: composer
+  tags:
+    - install
+    - composer
+
+- name: Install drupal/coder and phpcs
+  become_user: nkoporec
+  composer:
+    command: require
+    arguments: drupal/coder dealerdirect/phpcodesniffer-composer-installer
+    global_command: yes
+  tags:
+    - install
+    - composer
+
+- name: Install phpstan
+  become_user: nkoporec
+  composer:
+    command: require
+    arguments: phpstan/phpstan
+    global_command: yes
+  tags:
+    - install
+    - composer
