@@ -3,6 +3,8 @@
     name: aur_builder
     create_home: yes
     group: wheel
+  tags:
+    - aur_packages
 
 - name: Allow the `aur_builder` user to run `sudo pacman` without a password
   ansible.builtin.lineinfile:
@@ -10,6 +12,8 @@
     line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
     create: yes
     validate: 'visudo -cf %s'
+  tags:
+    - aur_packages
 
 - name: Install AUR packages
   kewlfft.aur.aur:
