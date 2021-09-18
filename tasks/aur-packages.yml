@@ -30,8 +30,16 @@
   tags:
     - aur_packages
 
+- name: Kill all proccess started by the aur_builder
+  become_user: root
+  shell: killall -9 -u aur_builder
+  tags:
+    - aur_packages
+
 - name: Remove the aur_builder
   ansible.builtin.user:
     name: aur_builder
     state: absent
     remove: yes
+  tags:
+    - aur_packages
