@@ -11,7 +11,3 @@
 
  2. Run the ansible as normal user: \
 `make ansible-install`
-
-## TODO:
- 1. Set up AUR packages
- 2. Set up fonts
