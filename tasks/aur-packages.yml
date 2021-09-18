@@ -19,13 +19,19 @@
   kewlfft.aur.aur:
     use: yay
     name:
-      - php74
       - slack-desktop
       - insomnia
       - espanso
       - ddev-bin
-      - brave
+      - sublime-merge
+      - brave-bin
   become: yes
   become_user: aur_builder
   tags:
     - aur_packages
+
+- name: Remove the aur_builder
+  ansible.builtin.user:
+    name: aur_builder
+    state: absent
+    remove: yes

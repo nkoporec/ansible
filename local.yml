@@ -22,5 +22,6 @@
     - include: tasks/nvim-setup.yml
     - include: tasks/productivity-tools.yml
     - include: tasks/projects.yml
+    - include: tasks/aur-packages.yml
     - include: tasks/post-install-setup.yml
     - include: tasks/reset.yml
