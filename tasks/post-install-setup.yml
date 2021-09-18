@@ -1,0 +1,17 @@
+- name: Clone fonts
+  become_user: nkoporec
+  shell: cd /home/nkoporec && git clone git@github.com:nkoporec/fonts.git .fonts
+  tags:
+    - post-install
+
+- name: Add user to the docker group
+  become_user: root
+  shell: usermod -aG docker nkoporec
+  tags:
+    - post-install
+
+- name: Autostart docker
+  become_user: root
+  shell: systemctl enable docker.service && systemctl enable containerd.service
+  tags:
+    - post-install

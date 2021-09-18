@@ -3,4 +3,4 @@
   shell: cd /home/nkoporec && yadm reset --hard
   tags:
     - install
-    - cleanup
+    - reset

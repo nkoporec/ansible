@@ -5,8 +5,6 @@
     dest_key_private: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
     source_key_pub: "./ssh/id_rsa.pub"
     dest_key_pub: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa.pub"
-    source_fonts: "./.fonts"
-    dest_fonts: "/home/nkoporec/.fonts"
   pre_tasks:
     - name: update repositories
       pacman:
@@ -17,7 +15,6 @@
     - include: tasks/zsh-setup.yml
     - include: tasks/core-setup.yml
     - include: tasks/dotfiles.yml
-    - include: tasks/fonts.yml
     - include: tasks/yay-setup.yml
     - include: tasks/node-setup.yml
     - include: tasks/npm-packages.yml
@@ -25,4 +22,5 @@
     - include: tasks/nvim-setup.yml
     - include: tasks/productivity-tools.yml
     - include: tasks/projects.yml
-    - include: tasks/cleanup.yml
+    - include: tasks/post-install-setup.yml
+    - include: tasks/reset.yml
