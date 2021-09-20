@@ -25,6 +25,8 @@
       - ddev-bin
       - sublime-merge
       - brave-bin
+      - pop-gtk-theme
+      - tela-icon-theme
   become: yes
   become_user: aur_builder
   tags:
