@@ -1,3 +1,5 @@
+# How to install archlinux with i3.
+
 1. Download the .ISO file from Arch Downloads.
 2. Create a bootable USB drive (using Etcher)
 3. Boot and type archinstall in the console.
