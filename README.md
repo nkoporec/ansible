@@ -7,7 +7,7 @@
 `make ansible-install`
 
 ## Installation (on new computer)
- 1. Clone the repo.
+ 1. See INSTALL.md
 
  2. Run the ansible as normal user: \
 `make ansible-install`
