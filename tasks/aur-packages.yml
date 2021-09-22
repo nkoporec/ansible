@@ -20,7 +20,7 @@
     use: yay
     name:
       - slack-desktop
-      - insomnia
+      - insomnia-bin
       - espanso
       - ddev-bin
       - sublime-merge
