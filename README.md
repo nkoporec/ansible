@@ -16,6 +16,7 @@
 ## Manual steps / TODO
  1. Automate .gitignore and .gitconfig
  2. Automate mimeapps.list (for default apps)
+ 3. Find a working spotify app (maybe spotify-tui ?)
 
 
 ## Troubleshooting
