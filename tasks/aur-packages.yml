@@ -23,6 +23,7 @@
       - insomnia-bin
       - espanso
       - ddev-bin
+      - lando-bin
       - sublime-merge
       - brave-bin
       - pop-gtk-theme
