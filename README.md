@@ -11,3 +11,14 @@
 
  2. Run the ansible as normal user: \
 `make ansible-install`
+
+
+## Manual steps / TODO
+ 1. Automate .gitignore and .gitconfig
+ 2. Automate mimeapps.list (for default apps)
+
+
+## Troubleshooting
+
+### Microphone not working
+ Most likely the channel is disabled. Go to `pavucontrol` and under input enable the microphone (lock icon).
