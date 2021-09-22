@@ -28,6 +28,7 @@
       - brave-bin
       - pop-gtk-theme
       - tela-icon-theme
+      - stripe-cli
   become: yes
   become_user: aur_builder
   tags:
