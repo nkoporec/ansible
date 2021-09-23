@@ -1,6 +1,6 @@
 - name: Create project folders
   become_user: nkoporec
-  shell: mkdir /home/nkoporec/personal && mkdir /home/nkoporec/work
+  shell: mkdir /home/nkoporec/personal && mkdir /home/nkoporec/work && mkdir /home/nkoporec/work/opensocial
   tags:
     - install
     - projects
@@ -14,7 +14,7 @@
 
 - name: Clone social-ddev project
   become_user: nkoporec
-  shell: cd {{ lookup('env', 'HOME') }}/work && git clone git@github.com:nkoporec/social-ddev.git open-social
+  shell: cd {{ lookup('env', 'HOME') }}/work/opensocial && git clone git@github.com:nkoporec/social-ddev.git open-social
   tags:
     - install
     - projects
