@@ -47,3 +47,19 @@
     - install
     - dotfiles
     - neovim
+
+- name: Install python 2 pynvim
+  become_user: nkoporec
+  shell: python2 -m pip install --user --upgrade pynvim
+  tags:
+    - install
+    - dotfiles
+    - neovim
+
+- name: Install python 3 pynvim
+  become_user: nkoporec
+  shell: python3 -m pip install --user --upgrade pynvim
+  tags:
+    - install
+    - dotfiles
+    - neovim

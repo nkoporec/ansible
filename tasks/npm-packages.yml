@@ -38,3 +38,21 @@
   tags:
     - install
     - node
+
+- name: Install CSS language  server
+  become_user: nkoporec
+  npm:
+    name: vscode-langservers-extracted
+    global: yes
+  tags:
+    - install
+    - node
+
+- name: Install Neovim plugin
+  become_user: nkoporec
+  npm:
+    name: neovim
+    global: yes
+  tags:
+    - install
+    - node
