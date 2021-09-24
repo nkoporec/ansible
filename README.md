@@ -42,7 +42,7 @@ The issue is that by default php8 is installed and older versions of phpstan was
     /usr/bin/php7 -d memory_limit=4G PATH_TO_PHPSTAN_PHAR $@
     ```
  3. Make it executable `sudo chmod +x phpstan7`
- 4. Move it to `/usr/bin/
+ 4. Move it to `/usr/bin/`
  5. In project nvim settings(.local.vimrc) alter the phpstan maker
     ```
     let phpStanConfigFilePath = 'path_to_config_file'
