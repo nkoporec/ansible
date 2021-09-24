@@ -1,3 +1,6 @@
+## About
+This is my personal ansible setup to set up a new arch linux machine. The OS should be installed via the `archinstall` command, see INSTALL.md on how to do it. After the installation, the `pacman -Sy --noconfirm --needed git ansible` command needs to be run in order to install the dependencies needed for this.
+
 ## Testing
  1. Build and start the containers: \
 `make clean && make build && make run && make shell`
