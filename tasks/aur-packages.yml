@@ -29,6 +29,7 @@
       - pop-gtk-theme
       - tela-icon-theme
       - stripe-cli
+      - tmuxinator
   become: yes
   become_user: aur_builder
   tags:
