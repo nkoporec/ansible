@@ -25,10 +25,10 @@ This is my personal ansible setup to set up a new arch linux machine. The OS sho
 
 ## Troubleshooting
 
-### Microphone not working
+#### Microphone not working
  Most likely the channel is disabled. Go to `pavucontrol` and under input enable the microphone (lock icon).
  
-### Microphone sound is choppy
+#### Microphone sound is choppy
  1. `sudo nvim /etc/pulse/daemon.conf`
  2. Set `default-sample-rate` and `alternate-sample-rate` to 48000
  3. Save and restart
