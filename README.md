@@ -33,7 +33,7 @@ This is my personal ansible setup to set up a new arch linux machine. The OS sho
  2. Set `default-sample-rate` and `alternate-sample-rate` to 48000
  3. Save and restart
 
-### phpstan does not work in nvim(using neomake)
+#### phpstan does not work in nvim(using neomake)
 The issue is that by default php8 is installed and older versions of phpstan was not compatible with it.
  1. Install php7, `sudo pacman -Sy php7`
  2. Create a bash script named `phpstan7` with contents (change variables with the correct values):
