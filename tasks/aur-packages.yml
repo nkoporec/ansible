@@ -30,6 +30,7 @@
       - tela-icon-theme
       - stripe-cli
       - tmuxinator
+      - beekeeper-studio-bin
   become: yes
   become_user: aur_builder
   tags:
