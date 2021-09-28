@@ -1,6 +1,6 @@
 - name: Install packages (using pacman)
   pacman:
-    name: tmux, ripgrep, fzf, bat, gimp, xclip, copyq, flameshot, firefox-developer-edition, nautilus, alacritty, gnome-calendar, gnome-calculator, file-roller, gparted, vlc, eog, libreoffice-still, evince
+    name: tmux, ripgrep, fzf, bat, gimp, xclip, copyq, flameshot, firefox-developer-edition, nautilus, alacritty, gnome-calendar, gnome-calculator, file-roller, gparted, vlc, eog, libreoffice-still, evince, spotifyd
   tags:
     - install
     - productivity
