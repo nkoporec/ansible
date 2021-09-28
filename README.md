@@ -50,3 +50,14 @@ The issue is that by default php8 is installed and older versions of phpstan was
     \ 'errorformat': '%E%f:%l:%m',
     \ }
     ```
+
+#### Use composer with php7
+ 1. Install php7, `sudo pacman -Sy php7 php7-gd`
+ 2. Enable ext-gd and ext-sockets extensions in `/etc/php7/php.ini`
+ 3. Create a bash script named `composer7` with contents (change variables with the correct values):
+    ```
+    #!/bin/bash
+    /usr/bin/php7 /usr/bin/composer $@
+    ```
+ 4. Make it executable `sudo chmod +x composer7`
+ 5. Move it to `/usr/bin/`
