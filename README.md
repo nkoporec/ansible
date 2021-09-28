@@ -19,9 +19,7 @@ This is my personal ansible setup to set up a new arch linux machine. The OS sho
 ## Manual steps / TODO
  1. Automate .gitignore and .gitconfig
  2. Automate mimeapps.list (for default apps)
- 3. Find a working spotify app (maybe spotify-tui ?)
- 4. Add a task to install gopls
-
+ 3. Add a task to install gopls
 
 ## Troubleshooting
 
