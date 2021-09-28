@@ -31,7 +31,6 @@
       - stripe-cli
       - tmuxinator
       - beekeeper-studio-bin
-      - spotify-qt
   become: yes
   become_user: aur_builder
   tags:
