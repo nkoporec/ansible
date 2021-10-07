@@ -64,4 +64,7 @@ The issue is that by default php8 is installed and older versions of phpstan was
 
 #### Why does it take longer to open a URL in qutebrowser than in chromium?
 
-When opening a URL in an existing instance, the normal qutebrowser Python script is started and a few PyQt libraries need to be loaded until it is detected that there is an instance running to which the URL is then passed. This takes some time. One workaround is to use this script and place it in your $PATH with the name "qutebrowser". This script passes the URL via a unix socket to qutebrowser (if its running already) using socat which is much faster and starts a new qutebrowser if it is not running already.
+When opening a URL in an existing instance, the normal qutebrowser Python script is started and a few PyQt libraries need to be loaded until it is detected that there is an instance running to which the URL is then passed. This takes some time. One workaround is to use this script(https://github.com/qutebrowser/qutebrowser/blob/master/scripts/open_url_in_instance.sh) and place it in your $PATH with the name "qutebrowser". This script passes the URL via a unix socket to qutebrowser (if its running already) using socat which is much faster and starts a new qutebrowser if it is not running already.
+
+1. Create a `qutebrowser` script in  `/usr/bin/` and add the contents of `open_url_in_instance` script.
+2. Make it executable `chmod +x ./qutebrowser`
