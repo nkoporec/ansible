@@ -20,6 +20,7 @@ This is my personal ansible setup to set up a new arch linux machine. The OS sho
  1. Automate .gitignore and .gitconfig
  2. Automate mimeapps.list (for default apps)
  3. Add a task to install gopls
+ 4. Automate qutebrowser theme install.
 
 ## Troubleshooting
 
