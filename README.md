@@ -61,3 +61,7 @@ The issue is that by default php8 is installed and older versions of phpstan was
     ```
  4. Make it executable `sudo chmod +x composer7`
  5. Move it to `/usr/bin/`
+
+#### Why does it take longer to open a URL in qutebrowser than in chromium?
+
+When opening a URL in an existing instance, the normal qutebrowser Python script is started and a few PyQt libraries need to be loaded until it is detected that there is an instance running to which the URL is then passed. This takes some time. One workaround is to use this script and place it in your $PATH with the name "qutebrowser". This script passes the URL via a unix socket to qutebrowser (if its running already) using socat which is much faster and starts a new qutebrowser if it is not running already.
