@@ -48,6 +48,24 @@
     - install
     - node
 
+- name: Install VueJS language  server
+  become_user: nkoporec
+  npm:
+    name: vls
+    global: yes
+  tags:
+    - install
+    - node
+
+- name: Install Svelte language  server
+  become_user: nkoporec
+  npm:
+    name: svelte-language-server
+    global: yes
+  tags:
+    - install
+    - node
+
 - name: Install Neovim plugin
   become_user: nkoporec
   npm:
