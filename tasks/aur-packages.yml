@@ -31,7 +31,7 @@
       - stripe-cli
       - tmuxinator
       - beekeeper-studio-bin
-      - qutebrowser-bin
+      - qutebrowser-git
       - chromium-widevine
       - timeshift
   become: yes
