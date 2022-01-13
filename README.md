@@ -70,3 +70,10 @@ When opening a URL in an existing instance, the normal qutebrowser Python script
 
 1. Create a `qutebrowser` script in  `/usr/bin/` and add the contents of `open_url_in_instance` script.
 2. Make it executable `chmod +x ./qutebrowser`
+
+#### How to downgrade packages
+
+If after system update certain packages are not working correctly then the easiest way to fix it is to downgrade the package to the previous working version.
+
+1. Run `sudo downgrade PKG`
+2. Select the version

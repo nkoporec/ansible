@@ -35,6 +35,7 @@
       - qutebrowser-git
       - chromium-widevine
       - timeshift
+      - downgrade
   become: yes
   become_user: aur_builder
   tags:
