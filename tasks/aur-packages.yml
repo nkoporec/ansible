@@ -19,6 +19,7 @@
   kewlfft.aur.aur:
     use: yay
     name:
+      - picom-ibhagwan-git
       - slack-desktop
       - insomnia-bin
       - espanso

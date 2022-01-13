@@ -1,6 +1,6 @@
 - name: Install System Packages (using pacman)
   pacman:
-    name: cmake, lua, unzip, libtool, gettext, rofi, dunst, nitrogen, htop, go, dconf-editor, nvidia-settings, pavucontrol, blueman, picom, docker, docker-compose, neofetch, networkmanager, network-manager-applet, blueberry, bluez-utils, lxappearance, alsa-utils, ttf-dejavu, python-pip, python2, python2-pip, playerctl, xorg-xinput
+    name: cmake, lua, unzip, libtool, gettext, rofi, dunst, nitrogen, htop, go, dconf-editor, nvidia-settings, pavucontrol, blueman, docker, docker-compose, neofetch, networkmanager, network-manager-applet, blueberry, bluez-utils, lxappearance, alsa-utils, ttf-dejavu, python-pip, python2, python2-pip, playerctl, xorg-xinput, networkmanager-l2tp, strongswan
   tags:
     - install
     - core
