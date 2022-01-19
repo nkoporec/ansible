@@ -36,6 +36,7 @@
       - chromium-widevine
       - timeshift
       - downgrade
+      - pulseaudio-bluetooth
   become: yes
   become_user: aur_builder
   tags:
