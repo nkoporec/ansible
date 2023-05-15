@@ -37,6 +37,7 @@
       - timeshift
       - downgrade
       - pulseaudio-bluetooth
+      - nvim-packer-git
   become: yes
   become_user: aur_builder
   tags:
